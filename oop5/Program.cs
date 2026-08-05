@@ -1,4 +1,6 @@
-﻿namespace oop5
+﻿using System.Runtime.Intrinsics.X86;
+
+namespace oop5
 {
     internal class Program
     {
@@ -62,8 +64,21 @@
             // each explicit members being caleed with its interface reference 
             #endregion
 
+            #region Q3
+        //Q3: Explain the difference between a shallow copy and a deep copy
+        // shallow : copy object but reference for reference type fields
+        //deeep : copy object ans inner objects creating independant objects
+
+        //.When would you use each one?
+        //shalow : no nested reference types ,object is immutable ,performance is critical
+        // Deep : object is isolated , changes dont effect the original
+
+        //What is the risk of using a shallow copy when the object has reference - type fields ?
+        // changing inner object affects two copies 
+            #endregion
+
             #region Q4
-      
+
             //var e1 = new Employee { Title = "Dev", Dept = new Department { Name = "IT" } };
             //var e2 = e1.ShallowCopy();
             //e2.Title = "QA";
