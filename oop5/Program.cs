@@ -1,4 +1,7 @@
-﻿using System.Runtime.Intrinsics.X86;
+﻿using ConsoleApp1;
+using System.Net.NetworkInformation;
+using System.Net.Sockets;
+using System.Runtime.Intrinsics.X86;
 
 namespace oop5
 {
@@ -65,16 +68,16 @@ namespace oop5
             #endregion
 
             #region Q3
-        //Q3: Explain the difference between a shallow copy and a deep copy
-        // shallow : copy object but reference for reference type fields
-        //deeep : copy object ans inner objects creating independant objects
+            //Q3: Explain the difference between a shallow copy and a deep copy
+            // shallow : copy object but reference for reference type fields
+            //deeep : copy object ans inner objects creating independant objects
 
-        //.When would you use each one?
-        //shalow : no nested reference types ,object is immutable ,performance is critical
-        // Deep : object is isolated , changes dont effect the original
+            //.When would you use each one?
+            //shalow : no nested reference types ,object is immutable ,performance is critical
+            // Deep : object is isolated , changes dont effect the original
 
-        //What is the risk of using a shallow copy when the object has reference - type fields ?
-        // changing inner object affects two copies 
+            //What is the risk of using a shallow copy when the object has reference - type fields ?
+            // changing inner object affects two copies 
             #endregion
 
             #region Q4
@@ -91,13 +94,71 @@ namespace oop5
             //// as two objects has same inner references changing inner object effect both copies
             #endregion
             #endregion
+
+            #region Part02
+            //// a. Create a Cinema and open it.
+            //Cinema cinema = new Cinema("your cinema");
+            //cinema.openCinema();
+            ////b. Create one of each ticket type with hardcoded data.
+            ////Book all three and add them to the Cinema.
+            //StandardTicket t1 = new StandardTicket(
+            //                        "Inception ",
+            //                        TicketType.Standard 
+            //                        , new SeatLocation('A' , 1) ,
+            //                        80 ,
+            //                        "1"
+            //                        );
+            //VIPTicket t2 = new VIPTicket("Avengers",
+            //    TicketType.VIP,
+            //    new SeatLocation('A', 2),
+            //    200,
+            //    true);
+            //IMAXTicket t3 = new IMAXTicket(
+            //    "Dune",
+            //    TicketType.IMAX,
+            //    new SeatLocation('A', 3),
+            //    130,
+                
+            //    true);
+            //t1.Book();
+            //t2.Book();
+            //t3.Book();
+            
+            //cinema.AddTicket(t1);
+            //cinema.AddTicket(t2);
+            //cinema.AddTicket(t3);
+
+            ////c.Print all tickets through the Cinema.
+            //Console.WriteLine();
+            //Console.WriteLine("=========== All Tickets ==========");
+            //cinema.Print();
+
+            ////d.Clone a VIP ticket, change the clone's movie name, and print both to prove independence.
+            //Console.WriteLine();
+            //Console.WriteLine("========= clone Test =========");
+            ////Console.WriteLine($"original :{t2}");
+            //VIPTicket t4 =(VIPTicket) t2.Clone();
+            
+            ////Console.WriteLine($"Clone : {t4}");
+            //t4.MoveiName = "Interstellar";
+            //Console.WriteLine($"original :{t2}");
+            //Console.WriteLine($"Clone : {t4}");
+            //Console.WriteLine(t4.TicketId);
+            //Console.WriteLine();
+            ////e.Cancel one ticket and reprint it to show the updated status.
+            //Console.WriteLine("========= After Cancellation =======");
+            //t1.Cancell();
+            //Console.WriteLine(t1);
+            //Console.WriteLine();
+
+            ////f.Use the utility method to print an array of printable tickets.
+            //Console.WriteLine("======== Booking Helper . PrintAll =======");
+            //Ticket[] tickets = [t1, t2, t3];
+            //BookingHelper.PrintTicket(tickets);
+            //Console.WriteLine();
+            //cinema.closeCinema();
+            #endregion
         }
     }
-    //class Department { public string Name; }
-    //class Employee
-    //{
-    //    public string Title;
-    //    public Department Dept;
-    //    public Employee ShallowCopy() => (Employee)this.MemberwiseClone();
-    //}
+    
 }
